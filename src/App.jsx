@@ -70,6 +70,13 @@ function App() {
   const handleAddWatched = (movie) => {
     setWatched([...watched, movie]);
   };
+
+  const handleRemoveMovie = (id) => {
+    const userConfirm = confirm("Do You want to delete movie");
+    if (userConfirm) {
+      setWatched((watched) => watched.filter((movie) => movie.imdbID !== id));
+    }
+  };
   return (
     <>
       <Header>
@@ -96,7 +103,10 @@ function App() {
           ) : (
             <>
               <WatchedMoviesDetails watched={watched} />
-              <WatchedMoviesList watched={watched} />
+              <WatchedMoviesList
+                watched={watched}
+                onRemoveMovie={handleRemoveMovie}
+              />
             </>
           )}
         </Box>

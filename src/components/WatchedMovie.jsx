@@ -1,7 +1,9 @@
 /* eslint-disable react/prop-types */
+// eslint-disable-next-line no-unused-vars
 import React from "react";
+import CancelCircle from "../assets/CancelCircle";
 
-const WatchedMovie = ({ movie }) => {
+const WatchedMovie = ({ movie, onRemoveMovie }) => {
   console.log(movie);
 
   return (
@@ -28,6 +30,9 @@ const WatchedMovie = ({ movie }) => {
           </p>
         </div>
       </div>
+      <p onClick={() => onRemoveMovie(movie.imdbID)}>
+        <CancelCircle />
+      </p>
     </li>
   );
 };

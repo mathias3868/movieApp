@@ -185,9 +185,9 @@ h4 {
   display: flex;
   border-bottom: 1px solid #b3b3b3;
   align-items: center;
-  column-gap: 30px;
+  /* column-gap: 40px; */
   cursor: pointer;
-  /* justify-content: center; */
+  justify-content: space-between;
 }
 
 .watchedRT {

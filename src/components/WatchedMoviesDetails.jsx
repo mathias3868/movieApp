@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+// eslint-disable-next-line no-unused-vars
 import React from "react";
 
 const WatchedMoviesDetails = ({ watched }) => {
@@ -14,7 +15,7 @@ const WatchedMoviesDetails = ({ watched }) => {
     Math.round(movie.userRating / watched.length)
   );
   const avgRuntime = watched.map((movie) =>
-    Math.round(movie.runtime / watched.length)
+    Math.floor(movie.runtime / watched.length)
   );
 
   // const { imdbRating, runtime } = watched;
